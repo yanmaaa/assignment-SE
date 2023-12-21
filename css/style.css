@@ -1,34 +1,38 @@
-html, body {
-    background-color: #455d7a;
+html,
+body {
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.main1{
     margin: 0;
     padding: 0;
 }
-/* 
-.hero img{
-    width: 100%;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    z-index: -1;
-} */
 
-.navbar {
-    background: transparent;
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    overflow: hidden;
+.main1 img{
+    width: 100%;
+    /* position: fixed; */
+    height: 100vh;
+    /* background-size: cover; */
+    position: absolute;
+    z-index: -1;
+    filter: brightness(50%);
 }
 
-.navbarcontent{
+.navbar {
     display: flex;
     align-items: center; 
     justify-content: space-between;
+    background: transparent;
+    padding: 30px;
+    overflow: hidden;
     height: 100%; 
 }
 
 h1{
-    color: rgb(29, 39, 48);
+    color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
     padding-left: 50px;
@@ -54,23 +58,29 @@ ul li {
 
 ul a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
-.content{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    /* z-index: -1; */
+.hero h1{
+    text-align: center;
+    padding-top: 120px;
+    font-size: 2.5rem
 }
 
-.content h1{
-    font-size: 40px;
-    padding: 50px 100px;
+.our{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 25%;
 }
 
-.main1{
-    position: fixed;
-    background-color: aqua;
+.our h1{
+    color: black;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .our {
+        margin-top: 5%; /* Adjust the percentage for smaller screens */
+    }
 }
