@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>abynm</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 <body>
@@ -15,26 +15,70 @@
             <img class="mySlides" src="./assets/bg3.jpg" style="width:100%">
         </div>
         <nav class="navbar">
-            <h1>ABY<span id="logo">AN</span></h1>
+            <h2>ABY<span id="logo">AN</span></h2>
             <ul>
-                <li><a href="default.asp">Home</a></li>
-                <li><a href="news.asp">Our Profile</a></li>
-                <li><a href="about.asp">Message Us</a></li>
+                <li><a href="#slideshow-container">Home</a></li>
+                <li><a href="#our">Our Profile</a></li>
+                <li><a href="#message">Message Us</a></li>
             </ul>
         </nav>
+
+        <div class="slideshow-container">
+            <div class="Slides">
+              <h2 style="font-size: 30px;">Hello, <span id="siapa">Maa</span><span>!!</span></h2>
+              <p>Welcome to this <br>website</p>
+            </div>
+            <div class="Slides">
+              <h2 style="font-size: 30px;">"Visi"</h2>
+              <p>Visi saya adalah menjadi seorang profesional<br> dan kreatif di bidang Software Engineer</p>
+            </div>
+            <div class="Slides">
+              <h2 style="font-size: 30px;">"Misi"</h2>
+              <p>Misi saya adalah berkontribusi pada Masyarakat<br> dan belajar lebih banyak lagi</p>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+          
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
     </header>
 
-    <header class="hero">
-        <h1>Hi <span id="siapa">Maa</span><span>,</span><br>Welcome to this website</h1>
-    </header>
-
-
-    <main>
-        <div class="our">
-            <h1>Our Profile</h1>
+    <main id="our">
+        <h1>Our Profile</h1>
+        <div class="our-imag">
+            <img src="./assets/profile.jpg">
+        </div>
+        <div class="our-text">
+            <p>Hallo perkenalkan saya Abyan Maula,seorang pelajar dari Kediri<br> yang memiliki hoby
+                Photography dan berminat<br> di bidang DevOps dan Sofrwate Engineer. Salam Kenal :)</p>                
         </div>
     </main>
-    
+
+    <div id="message">
+        <h3>Message Us</h3>
+        <form id="form">
+            <label>Nama <span class="required">*</span></label>
+            <input id="nama" type="text" />
+            <label>Tanggal Lahir <span class="required">*</span></label>
+            <input id="birth" type="date"/>
+            <label>Jenis Kelamin</label>
+            <input id="male" type="radio" name="gender" value="male" /> <p>Laki-laki</p>
+            <input id="female" type="radio" name="gender" value="female" /> <p>Perempuan</p>
+            <label>Pesan <span class="required">*</span></label>
+            <textarea id="sent" ></textarea>
+            <button id="submit-form" type="submit">Submit</button>
+            <div id="warning"></div>
+        </form>
+    </div>
+
+    <footer>Abyan M</footer>
+
     <script src="/code/assignment-SE/js/script.js"></script>
 </body>
 </html>
